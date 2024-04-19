@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.xiaopeng.xui.widget.XExposedDropdownMenu android:id="@+id/distance_display_mode" android:visibility="@integer/distance_display_mode_visibility" android:layout_width="190dp" android:layout_height="70dp" app:edmDropdownEntries="@array/remaining_distance_display_modes" app:edmDropdownSelection="-1" style="@style/XExposedDropdownMenu"/>
+</merge>

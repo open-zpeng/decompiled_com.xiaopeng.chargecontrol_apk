@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="104957" android:versionName="V1.6.0_20230921135459_Release-D55" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="com.xiaopeng.chargecontrol" platformBuildVersionCode="29" platformBuildVersionName="10">
+    <uses-sdk android:minSdkVersion="28" android:targetSdkVersion="28"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="com.xiaopeng.carprovider.permission.READ"/>
+    <uses-permission android:name="com.xiaopeng.carprovider.permission.WRITE"/>
+    <uses-permission android:name="com.xiaopeng.carprovider.permission.READ_WRITE"/>
+    <uses-permission android:name="com.xiaopeng.carcontrol.permission.CAR_CONTROL"/>
+    <uses-permission android:name="com.xiaopeng.permission.SERVICE"/>
+    <uses-permission android:name="com.xiaopeng.permission.BROADCAST"/>
+    <uses-permission android:name="android.car.permission.CAR_VENDOR_EXTENSION"/>
+    <uses-permission android:name="com.xiaopeng.xuimanager.permission.XUI_SMART"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <uses-permission android:name="com.xiaopeng.permission.DATA_SERVICE"/>
+    <uses-permission android:name="com.xiaopeng.vuisceneprovider.scene.read"/>
+    <uses-permission android:name="com.xiaopeng.vuisceneprovider.scene.write"/>
+    <uses-permission android:name="com.xiaopeng.permission.IPC"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    <uses-permission android:name="com.xiaopeng.permission.READ_CONFIGURATION"/>
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:name="com.xiaopeng.chargecontrol.app.App" android:launchMode="singleTop" android:allowBackup="true" android:supportsRtl="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <meta-data android:name="com.xiaopeng.metadata.shared.display.state" android:value="0"/>
+        <activity android:theme="@style/AppTheme.Panel" android:name="com.xiaopeng.chargecontrol.app.main.MainActivity" android:exported="false" android:launchMode="singleTask" android:configChanges="fontScale|navigation|keyboardHidden|keyboard">
+            <meta-data android:name="com.xiaopeng.metadata.activity.flags" android:value="320"/>
+        </activity>
+        <activity-alias android:name="com.xiaopeng.chargecontrol.view.D21bMainActivity" android:targetActivity="com.xiaopeng.chargecontrol.app.main.MainActivity">
+            <meta-data android:name="com.xiaopeng.metadata.activity.flags" android:value="320"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="xiaopeng" android:host="powercenter" android:path="/main"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+        </activity-alias>
+        <service android:name="com.xiaopeng.chargecontrol.app.CoreService" android:exported="false"/>
+        <service android:name="com.xiaopeng.chargecontrol.app.TrunkPowerDialogService" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.showTrunkPowerDialog"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.xiaopeng.chargecontrol.app.TrunkPowerDelayOffTimeDialogService" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.showTrunkPowerDelayOffTimeDialog"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.xiaopeng.chargecontrol.app.SolarRoofDialogService" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.showSolarRoofDialog"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.xiaopeng.chargecontrol.app.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.xiaopeng.chargecontrol.app.OpenApiReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.showSolarRoofDialog"/>
+                <action android:name="android.intent.action.showTrunkPowerDelayOffTimeDialog"/>
+                <action android:name="android.intent.action.showTrunkPowerDialog"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="SPEECH_OBSERVER_POWERCENTER" android:value="com.xiaopeng.chargecontrol.ChargecontrolSpeechObserver"/>
+        <meta-data android:name="SPEECH_EVENTS_POWERCENTER" android:value="command://charge.port.open|command://charge.start|command://charge.restart|command://charge.stop|command://charge.ui.open|command://charge.ui.close|command://charge.mode.percent|command://charge.mode.full|command://charge.mode.smart.on|command://charge.mode.smart.close|command://charge.mode.smart.off|command://charge.change.cltc.mileage|command://charge.change.wltp.mileage|command://charge.change.nedc.mileage|command://charge.trankpower.power.on|command://charge.trankpower.power.off|command://charge.discharge.limit.value.set|command://charge.battery.display.number|command://charge.battery.display.percentage|charge.support.open.port|charge.get.start.status|charge.get.stop.status|charge.get.restart.status|charge.support.limits.adjust|charge.limits.adjust.min|charge.limits.adjust.max|charge.support.smart.mode|charge.has.charging.order|charge.is.ready.page|powercenter.charge.status|gui.page.open.status.charge|unity.page.open.status.charge|charge.has.car.refrigerator|charge.has.sun.roof|charge.get.trunk.power.status|charge.discharge.limit.min.value|charge.discharge.limit.max.value|charge.trunk.power.status.open|charge.battery.display.style|command://charge.smartchargeport.close|command://charge.smartchargeport.open|charge.smartchargeport.status|command://charge.change.dynamic.mileage"/>
+        <provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="com.xiaopeng.chargecontrol.androidx-startup">
+            <meta-data android:name="com.xiaopeng.chargecontrol.config.DefaultInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="com.xiaopeng.chargecontrol.config.PlatformInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+        </provider>
+        <service android:name="com.xiaopeng.aar.server.ipc.KeepAliveService" android:exported="false"/>
+        <provider android:name="com.xiaopeng.lib.apirouter.server.ApiPublisherProvider" android:exported="true" android:authorities="com.xiaopeng.chargecontrol.api.publisher"/>
+        <service android:name="com.xiaopeng.lib.framework.ipcmodule.AgentService" android:permission="com.xiaopeng.permission.SERVICE" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.xiaopeng.ipc.AgentService"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.bumptech.glide.integration.webp.WebpGlideModule" android:value="GlideModule"/>
+    </application>
+</manifest>

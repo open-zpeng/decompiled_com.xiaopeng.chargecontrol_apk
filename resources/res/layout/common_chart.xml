@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.xiaopeng.xui.widget.XTextView android:textSize="@dimen/chart_axis_label" android:textColor="@color/chart_label" android:id="@+id/chart_y_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:layout_marginStart="72dp" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/title"/>
+    <com.xiaopeng.chargecontrol.chart.ChartView android:id="@+id/chart" android:layout_width="match_parent" android:layout_height="306dp" android:layout_marginTop="10dp" android:layout_marginStart="54dp" android:layout_marginEnd="64dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/chart_y_label"/>
+    <com.xiaopeng.xui.widget.XTextView android:textSize="@dimen/chart_axis_label" android:textColor="@color/chart_label" android:id="@+id/chart_x_label" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="@+id/chart" app:layout_constraintTop_toBottomOf="@+id/chart"/>
+</merge>

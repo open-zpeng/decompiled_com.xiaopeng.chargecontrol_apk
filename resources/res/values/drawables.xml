@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="charge_limit_bg_lfp" />
+    <drawable name="charge_limit_bg_lnc" />
+    <drawable name="charge_limit_bg_lnc_travel" />
+    <drawable name="charge_limit_bottom_indicator_lnc" />
+    <drawable name="charge_limit_bottom_indicator_lnc_travel" />
+    <drawable name="charge_limit_soc_bg" />
+    <drawable name="charge_limit_thumb_disable" />
+    <drawable name="charge_limit_thumb_enable" />
+    <drawable name="notification_template_icon_bg">#3333b5e5</drawable>
+    <drawable name="notification_template_icon_low_bg">#0cffffff</drawable>
+</resources>

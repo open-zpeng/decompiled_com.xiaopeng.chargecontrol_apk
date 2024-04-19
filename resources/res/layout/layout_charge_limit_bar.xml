@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="horizontal">
+    <com.xiaopeng.xui.widget.XButton android:id="@+id/limit_best" android:padding="0dp" android:layout_width="104dp" android:layout_height="50dp" android:text="@string/charge_limit_set_to_best" android:layout_marginStart="39dp" app:layout_constraintBottom_toBottomOf="@+id/limit_container" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="@+id/limit_container" app:vuiEnableViewVuiMode="true" style="@style/XButton.Ghost.Mid.Positive"/>
+    <com.xiaopeng.xui.widget.XLinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="26dp" app:layout_constraintBottom_toBottomOf="@+id/limit_best" app:layout_constraintStart_toEndOf="@+id/limit_best" app:layout_constraintTop_toTopOf="@+id/limit_best">
+        <com.xiaopeng.xui.widget.XTextView android:textSize="28sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/charge_limit" style="@style/Text.Title.Bottom"/>
+        <com.xiaopeng.xui.widget.XTextView android:textSize="22sp" android:id="@+id/limit_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/charge_limit_tips_reset" android:maxLines="1" style="@style/Text.Message"/>
+    </com.xiaopeng.xui.widget.XLinearLayout>
+    <com.xiaopeng.xui.widget.XLinearLayout android:id="@+id/limit_container" android:layout_width="@dimen/limit_config_container_width" app:layout_constraintEnd_toEndOf="0" app:vuiElementType="BUTTON" app:vuiLabel="@string/charge_limit" style="@style/ConfigContainer">
+        <com.xiaopeng.xui.widget.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/charge_limit_current_label" style="@style/ConfigLabel"/>
+        <com.xiaopeng.xui.widget.XTextView android:id="@+id/limit_current" android:layout_width="0dp" android:layout_height="wrap_content" android:text="90%" android:layout_weight="1" style="@style/ConfigContent"/>
+    </com.xiaopeng.xui.widget.XLinearLayout>
+</merge>

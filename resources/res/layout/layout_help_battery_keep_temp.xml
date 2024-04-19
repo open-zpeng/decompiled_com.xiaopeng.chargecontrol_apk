@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/layout_help_banner"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/banner" android:layout_alignStart="@+id/banner" android:layout_alignEnd="@+id/banner">
+        <com.xiaopeng.xui.widget.XTextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/help_battery_keep_description_top" android:text="@string/help_content_battery_warming_description" style="@style/Help.Content"/>
+        <com.xiaopeng.xui.widget.XTextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/help_battery_keep_title_top" android:text="@string/help_content_battery_warming_note_title" style="@style/Help.Title"/>
+        <com.xiaopeng.xui.widget.XTextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/help_battery_keep_content_top" android:text="@string/help_content_battery_warming_note_content" style="@style/Help.Content"/>
+    </LinearLayout>
+</merge>

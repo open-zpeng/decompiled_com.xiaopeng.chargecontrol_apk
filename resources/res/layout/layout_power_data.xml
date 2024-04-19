@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="bottom" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/power_data_min_width">
+        <com.xiaopeng.xui.widget.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/current" style="@style/ChargeData"/>
+        <com.xiaopeng.xui.widget.XTextView android:id="@+id/current" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" style="@style/ChargeData"/>
+        <com.xiaopeng.xui.widget.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/current_unit" android:layout_marginStart="2dp" style="@style/ChargeData"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/power_data_min_width" android:layout_marginStart="20dp">
+        <com.xiaopeng.xui.widget.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/volt" style="@style/ChargeData"/>
+        <com.xiaopeng.xui.widget.XTextView android:id="@+id/volt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" style="@style/ChargeData"/>
+        <com.xiaopeng.xui.widget.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/volt_unit" android:layout_marginStart="2dp" style="@style/ChargeData"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/power_data_min_width" android:layout_marginStart="20dp">
+        <com.xiaopeng.xui.widget.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/power" style="@style/ChargeData"/>
+        <com.xiaopeng.xui.widget.XTextView android:id="@+id/power" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" style="@style/ChargeData"/>
+        <com.xiaopeng.xui.widget.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/power_unit" android:layout_marginStart="2dp" style="@style/ChargeData"/>
+    </LinearLayout>
+</LinearLayout>

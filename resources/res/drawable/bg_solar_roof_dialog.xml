@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:insetTop="@dimen/x_bg_dialog_inset" android:insetBottom="@dimen/x_bg_dialog_inset">
+    <item android:drawable="@drawable/x_bg_dialog"/>
+    <item android:drawable="@drawable/bg_solar_roof"/>
+</layer-list>

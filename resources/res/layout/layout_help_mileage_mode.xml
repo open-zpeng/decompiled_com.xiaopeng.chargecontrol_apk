@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/layout_help_banner"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/banner" android:layout_alignStart="@+id/banner" android:layout_alignEnd="@+id/banner">
+        <com.xiaopeng.xui.widget.XTextView android:id="@+id/nedcTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mileage_mode_nedc_title_top" android:text="@string/help_content_mileage_title_nedc" style="@style/Help.Title"/>
+        <com.xiaopeng.xui.widget.XTextView android:id="@+id/nedcContent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mileage_mode_nedc_content_top" android:text="@string/help_content_mileage_description_nedc" style="@style/Help.Content"/>
+        <com.xiaopeng.xui.widget.XTextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mileage_mode_help_title_top" android:text="@string/help_content_mileage_title_wltp" style="@style/Help.Title"/>
+        <com.xiaopeng.xui.widget.XTextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mileage_mode_help_content_top" android:text="@string/help_content_mileage_description_wltp" style="@style/Help.Content"/>
+        <com.xiaopeng.xui.widget.XTextView android:id="@+id/cltcTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mileage_mode_cltc_title_top" android:text="@string/help_content_mileage_title_cltc" style="@style/Help.Title"/>
+        <com.xiaopeng.xui.widget.XTextView android:id="@+id/cltcContent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mileage_mode_cltc_content_top" android:text="@string/help_content_mileage_description_cltc" style="@style/Help.Content"/>
+    </LinearLayout>
+</merge>

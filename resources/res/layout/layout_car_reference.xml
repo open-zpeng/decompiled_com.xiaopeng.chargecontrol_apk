@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Space xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/car_reference" android:layout_width="match_parent" android:layout_height="@dimen/car_height" android:layout_marginTop="@dimen/car_margin_top" android:layout_marginStart="@dimen/car_margin_horizontal" android:layout_marginEnd="@dimen/car_margin_horizontal" app:layout_constraintTop_toTopOf="0"/>

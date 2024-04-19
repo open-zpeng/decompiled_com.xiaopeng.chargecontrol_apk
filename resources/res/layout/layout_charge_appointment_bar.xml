@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.xiaopeng.xui.widget.XSwitch android:enabled="false" android:id="@+id/charge_appointment_toggle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:layout_marginStart="38dp" app:layout_constraintBottom_toBottomOf="@+id/charge_appointment_time_container" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="@+id/charge_appointment_time_container" app:vuiEnableViewVuiMode="true" app:vuiLabel="@string/charge_appointment_label"/>
+    <com.xiaopeng.xui.widget.XTextView android:textSize="28sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/charge_appointment_label" android:paddingStart="33dp" app:layout_constraintBottom_toBottomOf="@+id/charge_appointment_time_container" app:layout_constraintStart_toEndOf="@+id/charge_appointment_toggle" app:layout_constraintTop_toTopOf="@+id/charge_appointment_time_container" style="@style/Text.Title.Bottom"/>
+    <com.xiaopeng.xui.widget.XLinearLayout android:id="@+id/charge_appointment_time_container" app:layout_constraintEnd_toEndOf="0" app:vuiElementType="BUTTON" app:vuiEnableViewVuiMode="true" app:vuiLabel="@string/vui_charge_appoint_time" style="@style/ConfigContainer">
+        <com.xiaopeng.xui.widget.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/appointment_time_label" android:layout_marginEnd="8dp" style="@style/ConfigLabel"/>
+        <com.xiaopeng.xui.widget.XTextView android:id="@+id/charge_appointment_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00" android:layout_weight="1" style="@style/ConfigContent"/>
+    </com.xiaopeng.xui.widget.XLinearLayout>
+</merge>

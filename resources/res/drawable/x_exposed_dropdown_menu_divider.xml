@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="2dp" android:start="0dp" android:end="0dp">
+        <shape>
+            <padding android:left="0dp" android:right="0dp"/>
+            <solid android:color="@color/energy_exposed_dropdown_menu_item_backgroundcolor"/>
+        </shape>
+    </item>
+    <item android:height="2dp" android:start="30dp" android:end="30dp">
+        <shape>
+            <padding android:left="30dp" android:right="30dp"/>
+            <solid android:color="@color/x_line_color"/>
+        </shape>
+    </item>
+</layer-list>

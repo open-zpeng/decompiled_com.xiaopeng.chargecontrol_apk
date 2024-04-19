@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xiaopeng.xui.widget.XTextView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/tab" android:maxLines="2" android:lineSpacingMultiplier="0.8" app:vuiEnableViewVuiMode="true" style="@style/XCatalog.Item"/>
